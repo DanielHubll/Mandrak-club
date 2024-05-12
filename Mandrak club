@@ -1,0 +1,58 @@
+
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Mandrak Club🎵")
+
+local KillingCheats = PhantomForcesWindow:NewSection("Opções")
+
+KillingCheats:CreateButton("SOM 100% ALTO", function()
+print("HI")local args = {
+    [1] = "ChangeVolume",
+    [2] = {
+        ["Volume"] = 100
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Func:InvokeServer(unpack(args))
+end)
+
+KillingCheats:CreateButton("BOMBOX NA MÃO", function()
+        print(HI)local args = {
+    [1] = "PlaceToolOnBack",
+    [2] = {
+        ["Where"] = "Right hand",
+        ["Skin"] = "Normal"
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.Func:InvokeServer(unpack(args))
+end)
+
+KillingCheats:CreateToggle("AUTO AFK💤", function(value)
+print(value)local Players = game:GetService("Players")
+local PlayerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.Parent = PlayerGui
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(1, 0, 1, 0)
+frame.BackgroundColor3 = Color3.new(1, 1, 1) -- Branco
+frame.Parent = ScreenGui
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Teleport")
+
+KillingCheats:CreateDropdown("DropDown", {"TP PRAIA🏖"}, 1, function(text)
+print(text)game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =  CFrame.new(2.581535577774048, 5684.4951171875, -292.30084228515625)
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Misc")
+
+KillingCheats:CreateSlider("Slider", 0, 100, 15, false, function(value)
+print(value)
+ end)
+KillingCheats:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
+print(value)
+end)
